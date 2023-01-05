@@ -1,0 +1,20 @@
+# Usage
+
+Save the FM3_assembly.FCMacro file into your Macro directory (e.g.: ~/.freecad/Macros) and restart FreeCAD.
+
+Please adjust the path where the images are saved via "replace all" in the macro.
+
+Prior to running the macro, please adjust the background color:
+* Edit -> Preferences
+* Display -> Colors
+* Select "Single Color" (White) as background
+
+# Important
+
+In FM3, there are so few THT parts which are done in this rendering, so in
+most cases it is easier to copy&paste the commands to the python console of FreeCAD:
+
+* set visibility manually (steps are at the bottom of the Macro)
+* set view
+* set visibility & select elements for this step
+* export jpeg

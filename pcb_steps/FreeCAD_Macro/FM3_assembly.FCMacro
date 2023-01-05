@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+
+# Macro Begin: /home/beni/FreeCAD_Macro/FM3_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
+import FreeCAD
+
+#change colors (Jackplugs & Neopixel)
+FreeCADGui.getDocument("mainboard_step").getObject("Part__Feature004").ShapeColor = (0.24,0.24,0.24)
+FreeCADGui.getDocument("mainboard_step").getObject("Part__Feature016").ShapeColor = (0.24,0.24,0.24)
+
+FreeCADGui.getDocument("mainboard_step").getObject("Part__Feature005").ShapeColor = (0.95,0.95,0.95)
+FreeCADGui.getDocument("mainboard_step").getObject("Part__Feature007").ShapeColor = (0.95,0.95,0.95)
+
+# hide all parts (but show SMD components)
+Gui.getDocument('mainboard_step').getObject('C_0603_1608Metric').Visibility=True
+Gui.getDocument('mainboard_step').getObject('SFH4045N').Visibility=True
+Gui.getDocument('mainboard_step').getObject('D_SOD_323.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('R_0603_1608Metric').Visibility=True
+Gui.getDocument('mainboard_step').getObject('C_0603_1608Metric001').Visibility=True
+Gui.getDocument('mainboard_step').getObject('D_SOD-323001.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('R_0603_1608Metric001').Visibility=True
+Gui.getDocument('mainboard_step').getObject('C_0603_1608Metric002').Visibility=True
+Gui.getDocument('mainboard_step').getObject('SFH4045N001').Visibility=True
+Gui.getDocument('mainboard_step').getObject('SFH4045N002').Visibility=True
+Gui.getDocument('mainboard_step').getObject('R_0603_1608Metric002').Visibility=True
+Gui.getDocument('mainboard_step').getObject('_90367280676.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('SFH4045N003').Visibility=True
+Gui.getDocument('mainboard_step').getObject('Buzzer_Murata_PKMCS0909E4000_R1.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('SOT-23.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('C_0603_1608Metric003').Visibility=True
+Gui.getDocument('mainboard_step').getObject('C_1210_3225Metric').Visibility=True
+Gui.getDocument('mainboard_step').getObject('PinSocket_1x04_P2.54mm_Vertical_SMD_Pin1Right.').Visibility=True
+Gui.getDocument('mainboard_step').getObject('Honeywell_MPRL').Visibility=True
+Gui.getDocument('mainboard_step').getObject('ArduinoNanoRP2040').Visibility=True
+
+Gui.getDocument("mainboard_step").getObject("FC68125").Visibility=False
+Gui.getDocument("mainboard_step").getObject('LED_D5_0mm_Horizontal_O3_81mm_Z9_0mm.').Visibility=False
+Gui.getDocument("mainboard_step").getObject('LED_D5_0mm_Horizontal_O3_81mm_Z9_0mm001.').Visibility=False
+Gui.getDocument("mainboard_step").getObject("NP").Visibility=False
+Gui.getDocument("mainboard_step").getObject("SW_Tactile_SPST_Angled_PTS645Vx58-2LFS").Visibility=False
+Gui.getDocument("mainboard_step").getObject("FC68125001").Visibility=False
+Gui.getDocument("mainboard_step").getObject("NP001").Visibility=False
+Gui.getDocument("mainboard_step").getObject("Vishay_MOLD-3Pin").Visibility=False
+
+# set view correctly
+Gui.activeDocument().activeView().viewTop()
+Gui.SendMsgToActiveView("ViewFit")
+
+# create images
+Gui.getDocument("mainboard_step").getObject("SW_Tactile_SPST_Angled_PTS645Vx58-2LFS").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/01.jpeg',1000,1300,'Current')
+
+Gui.getDocument("mainboard_step").getObject("Vishay_MOLD-3Pin").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/02.jpeg',1000,1300,'Current')
+
+Gui.getDocument("mainboard_step").getObject("FC68125").Visibility=True
+Gui.getDocument("mainboard_step").getObject("FC68125001").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/03.jpeg',1000,1300,'Current')
+
+Gui.getDocument("mainboard_step").getObject("LED_D5.0mm_Horizontal_O3.81mm_Z9.0mm").Visibility=True
+Gui.getDocument("mainboard_step").getObject("LED_D5.0mm_Horizontal_O3.81mm_Z9.0mm001").Visibility=True
+Gui.activeDocument().activeView().saveImage('/home/beni/04.jpeg',1000,1300,'Current')
+
+# Macro End: /home/beni/FreeCAD_Macro/FM3_assembly.FCMacro +++++++++++++++++++++++++++++++++++++++++++++++++
